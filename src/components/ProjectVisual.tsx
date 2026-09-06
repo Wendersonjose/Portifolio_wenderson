@@ -1,7 +1,17 @@
 import { Check } from "lucide-react";
 import type { Project } from "../data";
 
-export function ProjectVisual({ type }: { type: Project["visual"] }) {
+type ProjectVisualProps = { type: Project["visual"]; image?: Project["image"] };
+
+export function ProjectVisual({ type, image }: ProjectVisualProps) {
+  if (image) {
+    return (
+      <div className="project-art project-art--screenshot">
+        <img src={image.src} alt={image.alt} loading="lazy" />
+      </div>
+    );
+  }
+
   if (type === "erp") {
     return (
       <div className="project-art project-art--erp" aria-hidden="true">

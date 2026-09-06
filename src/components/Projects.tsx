@@ -12,7 +12,7 @@ export function Projects() {
       <div className="projects__grid">
         {projects.map((project, index) => (
           <article className={`project-card project-card--${index + 1}`} key={project.title} data-reveal>
-            <ProjectVisual type={project.visual} />
+            <ProjectVisual type={project.visual} image={project.image} />
             <div className="project-card__body">
               <p className="project-card__eyebrow">{project.eyebrow}</p>
               <h3>{project.title}</h3>

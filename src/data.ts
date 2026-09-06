@@ -9,6 +9,7 @@ export type Project = {
   primaryLink: { label: string; href: string };
   secondaryLink?: { label: string; href: string };
   visual: "erp" | "industry" | "nutrition" | "map" | "list";
+  image?: { src: string; alt: string };
 };
 
 export const projects: Project[] = [
@@ -29,6 +30,7 @@ export const projects: Project[] = [
       href: "https://www.uberhidraulicapecas.com.br/",
     },
     visual: "erp",
+    image: { src: "/projects/uber-hidraulica.webp", alt: "Página inicial do catálogo da Uber Hidráulica Peças" },
   },
   {
     title: "MECATEC Serviços",
@@ -43,6 +45,7 @@ export const projects: Project[] = [
       href: "https://www.mecatecservicos.com.br/",
     },
     visual: "industry",
+    image: { src: "/projects/mecatec.webp", alt: "Página inicial do site da MECATEC Serviços" },
   },
   {
     title: "Nutricionista Lívia",
@@ -57,6 +60,7 @@ export const projects: Project[] = [
       href: "https://www.nutricionistalivia.com.br/",
     },
     visual: "nutrition",
+    image: { src: "/projects/nutricionista-livia.webp", alt: "Página inicial do site da Nutricionista Lívia Verônica" },
   },
   {
     title: "Mapa de Locais Favoritos",
@@ -75,6 +79,7 @@ export const projects: Project[] = [
       href: "https://github.com/Wendersonjose/react-map-locations",
     },
     visual: "map",
+    image: { src: "/projects/mapa-locais-favoritos.webp", alt: "Interface do app Mapa de Locais Favoritos, com lista de locais salvos e mapa interativo" },
   },
 ];
 
